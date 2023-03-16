@@ -5,6 +5,7 @@ import { ShoppingCartIcon } from "@heroicons/react/outline"
 import { useCart } from '../../../Context/CartContext'
 
 const CartButton = () => {
+
   const {items} = useCart()
 
   return (
@@ -24,5 +25,4 @@ const CartButton = () => {
     </div>
   )
 }
-
 export default CartButton
