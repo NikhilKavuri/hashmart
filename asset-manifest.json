@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/hashmart/static/css/main.2bb96c04.css",
-    "main.js": "/hashmart/static/js/main.17ccf380.js",
+    "main.css": "/hashmart/static/css/main.6459cce0.css",
+    "main.js": "/hashmart/static/js/main.b23c7297.js",
     "index.html": "/hashmart/index.html",
-    "main.2bb96c04.css.map": "/hashmart/static/css/main.2bb96c04.css.map",
-    "main.17ccf380.js.map": "/hashmart/static/js/main.17ccf380.js.map"
+    "main.6459cce0.css.map": "/hashmart/static/css/main.6459cce0.css.map",
+    "main.b23c7297.js.map": "/hashmart/static/js/main.b23c7297.js.map"
   },
   "entrypoints": [
-    "static/css/main.2bb96c04.css",
-    "static/js/main.17ccf380.js"
+    "static/css/main.6459cce0.css",
+    "static/js/main.b23c7297.js"
   ]
 }
