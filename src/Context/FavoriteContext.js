@@ -5,29 +5,27 @@ const FavoriteContext = createContext()
 const defaultFavorite = JSON.parse(localStorage.getItem('favorite')) || []
 
 const FavoriteProvider = ({children}) => {
-  const [favoriteItems, setFavoriteItems] = useState(defaultFavorite)
-
-  useEffect(() => {
-    localStorage.setItem('favorite', JSON.stringify(favoriteItems))
-  }, [favoriteItems])
-
-  const addToFavorite = (data, findFavoriteItem) => {
-    if(!findFavoriteItem) {
-      return setFavoriteItems((items) => [data, ...items] )
+  const [favoriteItems, setFavoriteItems] = useState(defaultFavorite);
+  useEffect(()=>{
+      localStorage.setItem('cart',JSON.stringify(favoriteItems))
+  },[favoriteItems]);
+  const addToFavorite = (data, findFavoriteItem)=>{
+    if (!favoriteItems.includes(data)) {
+      setFavoriteItems((prevItems) => [data, ...prevItems]);
     }
-
-    const filtered = favoriteItems.filter((item) => item.id !== findFavoriteItem.id)
-    setFavoriteItems(filtered)
+    const filtered = favoriteItems.filter((favoriteItems)=>favoriteItems.id !== favoriteItems.id)     
+    setFavoriteItems(filtered);
+  }
+    const removeFromFavorite = (item_id)=>{
+      const filtered = favoriteItems.filter((favoriteItems)=> favoriteItems.id !== item_id)
+      setFavoriteItems(filtered);
+    }
+    const values = {
+      favoriteItems, setFavoriteItems,addToFavorite,removeFromFavorite
+    }
+    return <FavoriteContext.Provider value={values}>{children}</FavoriteContext.Provider>
   }
 
-  const values = {
-    favoriteItems,
-    addToFavorite,
-  }
-
-  return <FavoriteContext.Provider value={values}>{children}</FavoriteContext.Provider>
-
-}
 
   /**
    * 1. Create a state variable called favoriteItems and a function to update it called setFavoriteItems that is initialized to the defaultFavorite
