@@ -17,7 +17,7 @@ function App() {
       <Navbar />
       <Container>
         <Routes>
-          <Route path="/" exact element={<Products />} />
+          <Route path="/hashmart" exact element={<Products />} />
           <Route path="/:category_id" element={<Products />} />
           <Route path="/product/:product_id" element={<ProductDetail />} />
           <Route path="/cart" element={<Cart />} />

@@ -37,6 +37,7 @@ const Cart = () => {
           </div>
         </div>
       )}
+
       {items.length > 0 && (
         <div className="flex flex-wrap max-w-7xl mx-auto my-4">
           <div className="flex flex-col flex-1">
