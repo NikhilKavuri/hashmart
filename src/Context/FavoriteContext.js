@@ -10,8 +10,8 @@ const FavoriteProvider = ({children}) => {
       localStorage.setItem('cart',JSON.stringify(favoriteItems))
   },[favoriteItems]);
   const addToFavorite = (data, findFavoriteItem)=>{
-    if (!favoriteItems.includes(data)) {
-      setFavoriteItems((prevItems) => [data, ...prevItems]);
+    if (!findFavoriteItem) {
+      return setFavoriteItems((prevItems) => [data, ...prevItems]);
     }
     const filtered = favoriteItems.filter((favoriteItems)=>favoriteItems.id !== favoriteItems.id)     
     setFavoriteItems(filtered);
@@ -25,10 +25,8 @@ const FavoriteProvider = ({children}) => {
     }
     return <FavoriteContext.Provider value={values}>{children}</FavoriteContext.Provider>
   }
-
-
   /**
-   * 1. Create a state variable called favoriteItems and a function to update it called setFavoriteItems that is initialized to the defaultFavorite
+   * 1. Create a state variable called favoriteItems and a function to update it called setFavoriteyItems that is initialized to the defaultFavorite
    * 2. Create a useEffect hook that will run when the favoriteItems state variable changes
    * 3. The useEffect hook should set the favorite key in localStorage to the favoriteItems state variable
    * 4. Create a function called addToFavorite that takes in two parameters, data and findFavoriteItem
