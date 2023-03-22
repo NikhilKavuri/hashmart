@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/hashmart/static/css/main.6459cce0.css",
-    "main.js": "/hashmart/static/js/main.cb4f1f25.js",
+    "main.js": "/hashmart/static/js/main.07c2b8c9.js",
     "index.html": "/hashmart/index.html",
     "main.6459cce0.css.map": "/hashmart/static/css/main.6459cce0.css.map",
-    "main.cb4f1f25.js.map": "/hashmart/static/js/main.cb4f1f25.js.map"
+    "main.07c2b8c9.js.map": "/hashmart/static/js/main.07c2b8c9.js.map"
   },
   "entrypoints": [
     "static/css/main.6459cce0.css",
-    "static/js/main.cb4f1f25.js"
+    "static/js/main.07c2b8c9.js"
   ]
 }
