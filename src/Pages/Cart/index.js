@@ -22,7 +22,7 @@ const Cart = () => {
               <p className="text-center text-black mt-2 font-bold tracking-wide">
                 Add the products you like to the cart and buy.
               </p>
-              <Link to="/">
+              <Link to="/hashmart">
                 <div className={styles.continueButton}>
                   <button className={styles.button}>
                     <div className="flex flex-col self-center">
