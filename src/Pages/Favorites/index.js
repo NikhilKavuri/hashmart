@@ -1,14 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { HeartIcon } from "@heroicons/react/outline";
-import styles from "./styles.module.css";
-import { useFavorite } from "../../Context/FavoriteContext";
-import { useCart } from "../../Context/CartContext";
-import Card from "../../Components/Card";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { HeartIcon } from '@heroicons/react/outline'
+import styles from './styles.module.css'
+import { useFavorite } from '../../Context/FavoriteContext'
+import { useCart } from '../../Context/CartContext'
+import Card from '../../Components/Card'
 
 const Favorites = () => {
-  const { favoriteItems, addToFavorite } = useFavorite();
-  const { addToCart, items } = useCart();
+  const { favoriteItems, addToFavorite } = useFavorite()
+  const { addToCart, items } = useCart()
 
   return (
     <div>
@@ -38,11 +38,13 @@ const Favorites = () => {
           </div>
         </div>
       )}
-       {favoriteItems.length > 0 && (
+
+      {favoriteItems.length > 0 && (
         <div className={styles.cardGroup}>
           {favoriteItems.map((item) => {
-            const findFavoriteItem = favoriteItems.find((fav_item) => fav_item.id === item.id)
-            // findfav = (fav_id)
+            const findFavoriteItem = favoriteItems.find(
+              (fav_item) => fav_item.id === item.id
+            )
             const findCartItem = items.find((cart_item) => cart_item.id === item.id)
             return (
               <Card
@@ -61,4 +63,4 @@ const Favorites = () => {
   )
 }
 
-export default Favorites;
+export default Favorites

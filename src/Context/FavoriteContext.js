@@ -7,13 +7,13 @@ const defaultFavorite = JSON.parse(localStorage.getItem('favorite')) || []
 const FavoriteProvider = ({children}) => {
   const [favoriteItems, setFavoriteItems] = useState(defaultFavorite);
   useEffect(()=>{
-      localStorage.setItem('cart',JSON.stringify(favoriteItems))
+      localStorage.setItem('favorite',JSON.stringify(favoriteItems))
   },[favoriteItems]);
   const addToFavorite = (data, findFavoriteItem)=>{
     if (!findFavoriteItem) {
       return setFavoriteItems((prevItems) => [data, ...prevItems]);
     }
-    const filtered = favoriteItems.filter((favoriteItems)=>favoriteItems.id !== favoriteItems.id)     
+    const filtered = favoriteItems.filter((favoriteItems)=>favoriteItems.id !== findFavoriteItem.id)     
     setFavoriteItems(filtered);
   }
     const removeFromFavorite = (item_id)=>{

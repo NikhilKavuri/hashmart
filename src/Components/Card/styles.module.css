@@ -20,6 +20,7 @@
   rounded-md 
   overflow-hidden
   h-full
+  bg-white;
 }
 
 /***** CARD HEADER STYLES START *****/
@@ -69,6 +70,7 @@
   px-4
   rounded-xl
   opacity-75
+
 }
 
 .cardLink img {
@@ -94,6 +96,7 @@
   flex-col
   text-sm
   text-slate-100
+
 }
 
 .cardBody .brand, .cardTitle {
@@ -112,6 +115,7 @@
   @apply  
   font-light 
   truncate 
+  text-black;
 }
 
 /***** STAR ICON STYLES START *****/
