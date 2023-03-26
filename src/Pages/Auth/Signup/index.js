@@ -19,8 +19,8 @@ const Container = styled.div`
 `
 const H1 = styled.h1`
   font-size: 50px;
-  margin-top: 20px;
-  padding: 0px 60px;
+  margin-top: 10px;
+  padding: 0px 80px;
   justify-content: center;
 `
 
@@ -30,12 +30,16 @@ const StyledForm = styled.form`
 const Input = styled.input`
    margin-top: 20px;
    width: 100%;
-   height: 35px;
+   height: 30px;
    border-radius: 5px;
-   padding:10px;
+   padding:5px;
    color:black;
 `
-
+const Error = styled.span`
+  color: red;
+  font-size: 12px;
+  display:flex;
+`;
 const Div = styled.div`
   margin-top: 15px;
   span{
@@ -137,7 +141,7 @@ const Signup = () => {
 
             </div>
             <div>
-              {errors.password && <span >{errors.password}</span>}
+              {errors.password && <Error>{errors.password}</Error>}
               <Input
                 type="Password"
                 onChange={handleSignUpFormChange}
@@ -148,7 +152,7 @@ const Signup = () => {
 
             </div>
             <div>
-              {errors.passwordConfirm && <span>{errors.passwordConfirm}</span>}
+              {errors.passwordConfirm && <Error>{errors.passwordConfirm}</Error>}
               <Input
                 type="Password"
                 onChange={handleSignUpFormChange}
